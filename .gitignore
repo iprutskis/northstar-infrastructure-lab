@@ -1,0 +1,19 @@
+# Installation media
+ISO/
+Installers/
+
+# Screenshots (temporary)
+Screenshots/
+
+# Virtual machines
+*.vmdk
+*.vhd
+*.vhdx
+*.vdi
+*.vmem
+*.vmsn
+*.vmsd
+*.nvram
+
+# VMware
+.vmware/

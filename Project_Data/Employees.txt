@@ -1,0 +1,79 @@
+Northstar Technologies - Employees
+
+## IT
+John Smith
+Sarah Johnson
+Michael Davis
+Emily Wilson
+
+## Engineering
+James Taylor
+Olivia Martin
+Daniel White
+Sophia Harris
+
+## Finance
+William Clark
+Jessica Lewis
+Benjamin Walker
+Chloe Hall
+
+## Human Resources
+David Young
+Grace Allen
+Matthew King
+Lily Scott
+
+## Logistics
+Andrew Green
+Mia Baker
+Ryan Adams
+Zoe Turner
+
+## Maintenance
+Christopher Hill
+Hannah Carter
+Nathan Mitchell
+Ruby Phillips
+
+## Production
+Joseph Moore
+Ella Parker
+Thomas Evans
+Lucy Edwards
+
+## Purchasing
+Samuel Collins
+Amelia Stewart
+Jack Morris
+Isla Rogers
+
+## Quality Assurance
+Henry Cook
+Charlotte Bell
+Luke Murphy
+Eva Bailey
+
+## Research and Development
+Alexander Cooper
+Ava Richardson
+Ethan Cox
+Sophie Ward
+
+## Sales
+Jacob Foster
+Megan Gray
+Noah Bennett
+Freya Price
+
+## Warehouse
+Adam Brooks
+Ruby Kelly
+Daniel Reed
+Emma Hughes
+
+## Customer Support
+Lewis Jenkins
+Abigail Wood
+Joshua Powell
+Molly Watson
