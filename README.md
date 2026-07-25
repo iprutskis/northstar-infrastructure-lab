@@ -20,7 +20,7 @@ As the project grows, I also plan to treat the lab as a live business environmen
 
 ## Disclaimer
 
-Please refer to the [Project Disclaimer](09_Disclaimer.md) for information about the fictional environment and the purpose of this project.
+Please refer to the [Project Disclaimer](Documentation/09_Disclaimer.md) for information about the fictional environment and the purpose of this project.
 
 ---
 
