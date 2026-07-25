@@ -32,7 +32,7 @@
 | vCPUs | 2 |
 | Memory | 4 GB |
 | Storage | C: 60 GB (Thin Provisioned) |
-		  | D: 20 GB (Thin Provisioned) |
+| Secondary Storage | D: 20 GB (Thin Provisioned) |
 | Firmware | UEFI |
 | Secure Boot | Enabled |
 | Network Adapter | VMnet1 (Host-only Internal Network) |
