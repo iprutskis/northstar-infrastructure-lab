@@ -1,4 +1,4 @@
-# Enterprise Windows Infrastructure Project
+# Northstar Enterprise Infrastructure Lab
 
 ## What is this project?
 
