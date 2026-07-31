@@ -2,9 +2,6 @@
 ISO/
 Installers/
 
-# Screenshots (temporary)
-Screenshots/
-
 # Virtual machines
 *.vmdk
 *.vhd

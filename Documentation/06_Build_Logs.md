@@ -122,3 +122,40 @@ Deploy a Windows 11 Enterprise client workstation, join it to the northstar.loca
 CL01 was successfully deployed and integrated into the Northstar Technologies domain.
 The workstation communicates correctly with the Domain Controller and File Server, 
 and all configured network drives and file permissions were successfully validated.
+
+## Build 005 - Group Policy Deployment
+
+**Date:** 31 July 2026
+
+### Objective
+
+Deploy and validate Group Policy Objects (GPOs) to establish a centrally managed Windows environment for Northstar Technologies, including security settings, firewall configuration,
+Windows Update, user experience, power management, drive mapping and printer deployment.
+
+### Completed
+
+- Created enterprise Group Policy Objects
+- Configured Group Policy settings for workstations, servers and domain controllers where applicable
+- Linked GPOs to the appropriate Organizational Units (OUs)
+- Verified GPO inheritance and precedence
+- Configured automatic departmental drive mappings using Group Policy Preferences
+- Configured Windows Defender settings
+- Configured Windows Defender Firewall baseline
+- Configured Windows Update settings
+- Configured Windows user experience settings
+- Configured power management settings
+- Validated policy deployment using gpupdate and gpresult
+- Verified successful application of both computer and user policies
+- Verified automatic network drive mapping and access to departmental shares
+
+### Issues Encountered
+
+- Network shares became inaccessible after the initial Windows Defender Firewall Baseline deployment.
+- Investigation determined that disabling local firewall rules prevented the built-in SMB firewall rules from being applied.
+- Updated the Firewall Baseline to allow local firewall and connection security rules.
+- Re-tested Group Policy deployment and confirmed successful access to all mapped network drives.
+
+### Outcome
+
+Group Policy infrastructure was successfully deployed and validated. User and computer policies applied correctly, network drives were mapped automatically,
+shared resources remained accessible and the final Firewall Baseline operated as intended without impacting domain services.
