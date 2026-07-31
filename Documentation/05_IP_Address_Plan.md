@@ -9,7 +9,9 @@
 | Purpose | Internal business network |
 | Default Gateway | None (Host-Only Lab) |
 | DNS Server | 192.168.10.10 (DC01) |
-| DHCP Scope | To be configured |
+| DHCP Scope | Northstar Clients |
+| DHCP Server | DC01 (192.168.10.10) |
+| Lease Duration | 8 days |
 
 ## Domain Information
 
@@ -38,16 +40,36 @@ administration, troubleshooting and future expansion.
 
 | Asset ID | Device | Hostname | IP Address | Assignment | Notes |
 |----------|--------|----------|------------|------------|-------|
-| SRV-001 | Domain Controller | DC01 | 192.168.10.10 | Static | AD DS, DNS |
+| SRV-001 | Domain Controller | DC01 | 192.168.10.10 | Static | AD DS, DNS, DHCP |
 | SRV-002 | File server | FS01 | 192.168.10.11 | Static | File Server Role |
 
 ## DHCP Scope
 
-DHCP Scope will be configured after the DHCP Server role has been installed
-and the required network infrastructure has been completed.
+## DHCP Scope
+
+| Setting | Value |
+|---------|-------|
+| Scope Name | Northstar Clients |
+| Network | 192.168.10.0/24 |
+| Address Range | 192.168.10.100 - 192.168.10.199 |
+| Subnet Mask | 255.255.255.0 |
+| Lease Duration | 8 Days |
+| DNS Server | 192.168.10.10 |
+| DNS Domain | northstar.local |
+| Default Gateway | None (Host-only Lab) |
+| Excluded Range | 192.168.10.1 - 192.168.10.99 |
+
+### Validation
+
+- DHCP Server installed on DC01.
+- DHCP authorized in Active Directory.
+- Scope activated successfully.
+- CL01 successfully obtained IP address **192.168.10.100**.
+- Lease verified in DHCP Management Console.
+- FS01 was tested with DHCP and returned to a static IP address.
 
 ## Notes
 
-This IP addressing scheme has been designed to separate infrastructure,
-servers and client devices while providing sufficient capacity for future
-business growth.
+This IP addressing scheme separates infrastructure servers from client devices while providing sufficient capacity for future business growth.
+
+Infrastructure servers use static IP addresses, while workstation devices receive addresses automatically through DHCP.

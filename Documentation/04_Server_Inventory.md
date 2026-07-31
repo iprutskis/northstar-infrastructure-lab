@@ -17,7 +17,7 @@
 | Network Adapter | VMnet1 (Host-only Internal Network) |
 | IP Address | 192.168.10.10 |
 | Domain | northstar.local |
-| Installed Roles | Active Directory Domain Services (AD DS), DNS Server |
+| Installed Roles | Active Directory Domain Services (AD DS), DNS Server, DHCP |
 | Purpose | Domain authentication, directory services and DNS resolution |
 
 ## FS01
