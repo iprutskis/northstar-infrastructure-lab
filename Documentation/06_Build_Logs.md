@@ -187,3 +187,51 @@ Windows Update, user experience, power management, drive mapping and printer dep
 
 Group Policy infrastructure was successfully deployed and validated. User and computer policies applied correctly, network drives were mapped automatically,
 shared resources remained accessible and the final Firewall Baseline operated as intended without impacting domain services.
+
+---
+
+## Build 006 - Enterprise Network Infrastructure
+
+**Date:** 1 August 2026
+
+### Objective
+
+Implement enterprise network services by deploying a Windows DHCP Server, introducing a dual-network architecture,
+enabling internet connectivity for all virtual machines and validating communication between on-premises infrastructure and external services.
+
+---
+
+### Completed
+
+- Installed and configured the Windows DHCP Server role on DC01
+- Authorised the DHCP Server in Active Directory
+- Created and activated the **Northstar Clients** DHCP scope
+- Configured DHCP options for DNS server and DNS suffix
+- Configured DC01 with separate Internal and External network adapters
+- Configured FS01 with separate Internal and External network adapters
+- Configured CL01 with separate Internal and External network adapters
+- Connected all virtual machines to the VMware NAT network for internet access
+- Configured DC01 DNS forwarders for external name resolution
+- Disabled DNS registration on the DC01 External network adapter to prevent incorrect DNS records
+- Configured all domain-joined systems to use DC01 (192.168.10.10) as their preferred DNS server
+- Validated DHCP lease assignment for CL01
+- Verified internal hostname resolution between DC01, FS01 and CL01
+- Verified external DNS resolution through DC01
+- Verified internet connectivity from all virtual machines
+- Successfully updated Group Policy using `gpupdate /force`
+- Updated project documentation to reflect the completed network architecture
+
+---
+
+### Issues Encountered
+
+- The multi-homed Domain Controller initially registered both network adapters in DNS, causing domain clients to resolve the incorrect IP address.
+- DNS registration was disabled on the External network adapter, ensuring that only the Internal IP address is published in Active Directory DNS.
+- Client network adapter identification required verification using IP configuration rather than Windows network profile names, as the displayed network profile was not a reliable indicator of adapter purpose.
+
+---
+
+### Outcome
+
+The Northstar Technologies lab now operates with a fully functional enterprise network architecture. Active Directory, DNS, DHCP, Group Policy and file services communicate over the Internal network, 
+while internet access is provided through the External VMware NAT network. The environment is now prepared for Microsoft 365, Microsoft Entra ID and Intune integration.
