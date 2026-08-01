@@ -1,5 +1,12 @@
 # Server Inventory
 
+## Purpose
+
+This document provides an inventory of all servers within the Northstar Technologies Ltd lab environment. It records each server's hardware allocation, 
+operating system, network configuration and installed roles.
+
+---
+
 ## DC01
 
 | Property | Value |
@@ -14,11 +21,16 @@
 | Storage | C: 100 GB (Thin Provisioned) |
 | Firmware | UEFI |
 | Secure Boot | Enabled |
-| Network Adapter | VMnet1 (Host-only Internal Network) |
-| IP Address | 192.168.10.10 |
+| Internal Network | VMnet1 (Host-only) |
+| Internal IP Address | 192.168.10.10 |
+| External Network | VMnet8 (NAT) |
+| External IP Address | DHCP (VMware NAT) |
+| Preferred DNS Server | 192.168.10.10 |
 | Domain | northstar.local |
 | Installed Roles | Active Directory Domain Services (AD DS), DNS Server, DHCP |
 | Purpose | Domain authentication, directory services and DNS resolution |
+
+---
 
 ## FS01
 
@@ -35,9 +47,11 @@
 | Secondary Storage | D: 20 GB (Thin Provisioned) |
 | Firmware | UEFI |
 | Secure Boot | Enabled |
-| Network Adapter | VMnet1 (Host-only Internal Network) |
-| IP Address | 192.168.10.11 |
-| DNS Server | 192.168.10.10 |
+| Internal Network | VMnet1 (Host-only) |
+| Internal IP Address | 192.168.10.11 |
+| External Network | VMnet8 (NAT) |
+| External IP Address | DHCP (VMware NAT) |
+| Preferred DNS Server | 192.168.10.10 |
 | Domain | northstar.local |
 | Installed Roles | File Server |
 | Purpose | Departmental file storage, user home folders and NTFS permission management |

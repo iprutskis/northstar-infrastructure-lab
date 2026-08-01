@@ -10,6 +10,8 @@ ensuring employees only have access to information required for their role.
 
 The server is designed to provide secure, reliable and scalable file storage for the company's daily operations.
 
+---
+
 ## Business Requirements
 
 The file server must:
@@ -20,6 +22,8 @@ The file server must:
 - Restrict access using security groups
 - Support future growth of the business
 - Be easy to manage and maintain
+
+---
 
 ## Folder Structure
 
@@ -37,6 +41,8 @@ D:\
 └── Software
 ```
 
+---
+
 ### Folder Purpose
 
 | Folder | Purpose |
@@ -46,6 +52,8 @@ D:\
 | Home | User home folders |
 | Shares | Departmental shared folders |
 | Software | Software installers, drivers and utilities for internal use |
+
+---
 
 ## Share Structure
 
@@ -69,20 +77,28 @@ D:\Shares
 └── Warehouse
 ```
 
+---
+
 ### Design Principles
 
 - The Company folder provides shared resources accessible to all employees according to the configured permissions
 - Each department has its own dedicated shared folder
 - The folder structure is designed to support future expansion without major redesign
 
+---
+
 ## Permission Model
 
 The file server uses a layered permission model combining SMB share permissions with NTFS permissions.
+
+---
 
 ### Share Permissions
 
 All departmental shares grant **Authenticated Users** Full Control.
 Share permissions are intentionally permissive because access control is enforced through NTFS permissions.
+
+---
 
 ### NTFS Permissions
 
@@ -91,6 +107,8 @@ Department folders inherit permissions from the root share directory before inhe
 Each departmental folder grants **Modify** permissions only to the corresponding Active Directory security group.
 No permissions are assigned directly to individual users.
 This approach simplifies administration and follows the Principle of Least Privilege.
+
+---
 
 ## User Home Folders
 
@@ -105,12 +123,16 @@ The home folder path is configured using:
 When a home folder is assigned, Windows automatically creates the user's folder and applies the appropriate NTFS permissions.
 Each user receives exclusive access to their own home folder while administrators retain full administrative access.
 
+---
+
 ## Access-Based Enumeration
 
 Access-Based Enumeration (ABE) is enabled on all departmental shares.
 ABE hides folders and shares from users who do not have permission to access them.
 This improves usability by reducing unnecessary clutter and prevents users from seeing departmental resources outside their responsibilities.
 ABE does not replace NTFS permissions; it only controls visibility.
+
+---
 
 ## Security Design Principles
 
@@ -122,6 +144,8 @@ The file server has been designed using the following principles:
 - Separation of share and NTFS permissions
 - Hidden administrative shares where appropriate
 - Consistent permission inheritance
+
+---
 
 ## Future Expansion
 
