@@ -4,7 +4,8 @@
 
 The **NS - Security Baseline** Group Policy Object (GPO) establishes the standard security configuration for Windows computers within the Northstar Technologies environment.
 
-The policy applies security hardening, audit configuration, User Account Control (UAC), event log settings and administrative template policies to improve system security, reduce attack surface and provide consistent configuration across managed devices.
+The policy applies security hardening, audit configuration, User Account Control (UAC), event log settings and administrative template policies to improve system security, 
+reduce attack surface and provide consistent configuration across managed devices.
 
 ---
 
@@ -334,4 +335,6 @@ The policy was validated by:
 
 # Notes
 
-This policy provides the primary security baseline for Windows computers within the Northstar Technologies environment. It combines Microsoft security recommendations with organisation-specific security requirements to establish a consistent, secure and manageable operating environment while maintaining compatibility with normal business operations.
+This policy provides the primary security baseline for Windows computers within the Northstar Technologies environment. 
+It combines Microsoft security recommendations with organisation-specific security requirements to establish a consistent, 
+secure and manageable operating environment while maintaining compatibility with normal business operations.
