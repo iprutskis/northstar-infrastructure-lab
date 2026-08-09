@@ -147,6 +147,34 @@ The file server has been designed using the following principles:
 
 ---
 
+## Microsoft Entra Connect Sync
+
+FS01 also hosts **Microsoft Entra Connect Sync**, providing identity synchronization between the on-premises **northstar.local** Active Directory domain and the Northstar Technologies Microsoft Entra ID tenant.
+
+The synchronization service allows selected Active Directory identities to be represented within Microsoft Entra ID and supports the hybrid identity configuration used by Northstar Technologies.
+
+### Synchronization Design
+
+| Property | Configuration |
+|----------|---------------|
+| Synchronization Server | FS01 |
+| On-Premises Directory | northstar.local |
+| Cloud Directory | Microsoft Entra ID |
+| Synchronization Service | Microsoft Entra Connect Sync |
+| Synchronization Direction | On-Premises Active Directory → Microsoft Entra ID |
+
+### Purpose
+
+Microsoft Entra Connect Sync is used to:
+
+- Synchronize selected Active Directory identities with Microsoft Entra ID
+- Maintain consistent user identities between on-premises and cloud services
+- Support Hybrid Microsoft Entra joined workstations
+- Support Microsoft 365 and Microsoft Intune integration
+- Provide the identity synchronization layer for the Northstar hybrid environment
+
+---
+
 ## Future Expansion
 
 Future improvements may include:

@@ -66,6 +66,9 @@ Purpose
 
 - Internet connectivity
 - Microsoft 365
+- Microsoft Entra ID
+- Microsoft Intune
+- Microsoft Entra Connect synchronization
 - Windows Update
 - Software downloads
 - Cloud services
@@ -114,3 +117,9 @@ The lab uses two independent DHCP services.
 Detailed DHCP configuration is documented in:
 
 - 10_DHCP_Server.md
+
+## Network Architecture Diagram
+
+The following diagram provides an overview of the Northstar Technologies lab network architecture, including internal and external VMware networking, server infrastructure, workstation connectivity and Microsoft cloud services.
+
+![Northstar Network Architecture](../Screenshots/Network_Architecture/Northstar_Network_Architecture.png)

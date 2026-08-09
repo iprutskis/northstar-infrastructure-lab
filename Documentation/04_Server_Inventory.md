@@ -54,4 +54,5 @@ operating system, network configuration and installed roles.
 | Preferred DNS Server | 192.168.10.10 |
 | Domain | northstar.local |
 | Installed Roles | File Server |
-| Purpose | Departmental file storage, user home folders and NTFS permission management |
+| Installed Services | Microsoft Entra Connect Sync |
+| Purpose | Departmental file storage, user home folders and NTFS permission management and synchronization of on-premises Active Directory identities with Microsoft Entra ID |
