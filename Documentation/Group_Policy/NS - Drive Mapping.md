@@ -65,7 +65,7 @@ Departmental drives are deployed using **Item-Level Targeting** based on Active 
 | Drive | Share | Target Group |
 |-------|-------|--------------|
 | F: | Finance | Finance Users OR Finance Managers |
-| H: | Human Resources | HR Users OR HR Managers |
+| V: | Human Resources | HR Users OR HR Managers |
 | I: | IT Department | IT Users OR IT Managers |
 | L: | Logistics | Logistics Users OR Logistics Managers |
 | M: | Maintenance | Maintenance Users OR Maintenance Managers |
